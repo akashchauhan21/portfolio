@@ -1,18 +1,14 @@
 <?php 
 
-$file = $_GET['Resume'].".pdf";
+$file = $_GET["file"] .".pdf"; 
 
+// We will be outputting a PDF 
+header('Content-Type: application/pdf'); 
 
-header("content-disposition: attachment; filename=" .urlencode($file));
+// It will be called downloaded.pdf 
+header('Content-Disposition: attachment; filename="Resume.pdf"'); 
 
+$imagpdf = file_put_contents($image, file_get_contents($file)); 
 
-$fb = fopen($file, "r");
-
-while(!feof($fb)){
-	echo fread($fb, 8192);
-	flush();
-}
-
-fclose($fb);
-
-?>
+echo $imagepdf; 
+?> 
