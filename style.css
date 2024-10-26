@@ -18,6 +18,8 @@ html, body {
     animation: changeBg 10s linear infinite;
 }
 
+#more {display: none;}
+
 @keyframes changeBg{
     0%{
         background: #ffe6e6;
