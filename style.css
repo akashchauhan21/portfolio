@@ -225,11 +225,6 @@ html, body {
 
 }
 
-.card img:hover
-{
-   transform: scale(1.1) rotate(5deg);
-}
-
 .card-body{
     background-color: #ff913d;
 }
