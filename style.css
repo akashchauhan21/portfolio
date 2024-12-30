@@ -203,6 +203,11 @@ html, body {
     text-align: center;
 }
 
+#scroll_menu {
+    display: none;
+}
+
+
 /*=========================================
             RESPONSIVE CODE
 =========================================*/
@@ -237,4 +242,27 @@ html, body {
     margin: 0px 5%;
 }
 
+#scroll_menu {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        width: auto;
+        height: 100%;
+        margin-top: -15px;
+    }
+
+#scroll_menu img{
+    height: 70px;
+    padding: 10px 20px;
+
+}
+#scroll_menu a{
+    text-decoration: none;
+    display: grid;
+    padding: 10px 10px;
+    color: black;
+
+}
 }
