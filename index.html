@@ -1,222 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Akash Kumar Singh | Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Portfolio</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/4100a22e85.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="bootstrap.min.css" />
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Bootstrap JS -->
-  <script src="bootstrap.min.js"></script>
-  <script src="index.js"></script>
-
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f7fa;
-      color: #333;
-    }
-
-    .navbar-mod {
-      background: linear-gradient(to right, #1f1c2c, #928dab);
-    }
-
-    .navbar-brand {
-      font-weight: 600;
-      font-size: 1.4rem;
-      color: #fff;
-    }
-
-    #scroll_menu {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      list-style: none;
-      padding: 20px 0;
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-    }
-
-    #scroll_menu li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .section {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .img {
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    .about h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-
-    .para {
-      font-size: 1.1rem;
-    }
-
-    .anchor {
-      background-color: #6c63ff;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .anchor:hover {
-      background-color: #554cd1;
-    }
-
-    .ul-list {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 20px 0;
-    }
-
-    .li-list {
-      list-style: none;
-      padding: 10px 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background-color: #fff;
-      transition: all 0.3s ease;
-    }
-
-    .li-list:hover {
-      background-color: #6c63ff;
-      color: white;
-      transform: translateY(-5px);
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px 0;
-      font-size: 0.95rem;
-    }
-
-    .footer a {
-      color: red;
-      font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      .section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .img {
-        width: 100%;
-        max-width: 300px;
-      }
-    }
-  </style>
+<!--     =========================================
+                    CSS & JS LINK
+    ========================================= -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/4100a22e85.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <script type="text/javascript" src="bootstrap.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-mod mb-3">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Akash Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://cliqdeal.store" target="_blank">Product</a></li>
-          <li class="nav-item"><a class="nav-link" href="Resume.pdf" target="_blank">Download CV</a></li>
-        </ul>
-      </div>
+
+   <nav class="navbar navbar-expand-lg navbar-dark navbar-mod mb-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://cliqdeal.store">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link cv" href="Resume.pdf">Download CV</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-
-  <!-- Scroll Menu -->
-  <ul id="scroll_menu">
-    <li><a href="project.html"><img src="planning.png" width="20">Project</a></li>
-    <li><a href="#"><img src="certificate.png" width="20">Certificate</a></li>
-    <li><a href="#"><img src="github.png" width="20">Github</a></li>
-    <li><a href="#"><img src="linkedin.png" width="20">LinkedIn</a></li>
-    <li><a href="#"><img src="media.png" width="20">Reddit</a></li>
-  </ul>
-
-  <!-- About Section -->
-  <div class="container mt-5 mb-5">
-    <section class="section">
-      <img class="img" src="profile-pic.png" height="200" width="200" alt="Profile Picture">
-      <div class="about">
-        <h4>Hello, I'm</h4>
-        <h1>Akash Kumar Singh</h1>
-        <p class="para">A Full Stack Developer <span class="text-muted">from India</span></p>
-        <p class="para-1">
-          I’m a passionate web developer, specializing in creating dynamic, user-friendly websites and applications.
-          My expertise includes HTML, CSS, JavaScript, and frameworks like React and Node.js.
-          <span id="dots">...</span><span id="more" style="display: none;"> I thrive on solving complex problems and turning ideas into functional, high-performing digital solutions.
-            With a keen understanding of financial systems, I aim to bridge the gap between technology and finance,
-            delivering impactful projects that enhance user experiences.
-          </span>
-        </p>
-        <button onclick="myFunction()" id="myBtn" class="anchor">Read more</button>
-      </div>
-    </section>
   </div>
+</nav>
+<div>
+    <ul id="scroll_menu" align="center">
+        <li>
+            <a href="project.html"><img src="planning.png">Project</a>
+        </li>
+        <li><a href="#"><img src="certificate.png">Certificate</a>
+        </li>
+        <li><a href="#"><img src="github.png">Github</a>
+        </li>
+        <li><a href="#"><img src="linkedin.png">Linkedin</a></li>
+        <li><a href="#"><img src="media.png">Redit</a></li>
 
-  <!-- Navigation Boxes -->
-  <div class="container box">
-    <ul class="ul-list">
-      <a href="index.html"><li class="li-list">Portfolio</li></a>
-      <a href="project.html"><li class="li-list">Projects</li></a>
     </ul>
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    <p>Crafted with ❤️ by <a href="index.html">Akash Chauhan</a></p>
-  </div>
-
-  <!-- Read More Script -->
-  <script>
-    function myFunction() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("myBtn");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-  </script>
+</div>
+<div class="container mb-5 mt-5">
+    <section class="section">
+        <img class="img" src="profile-pic.png" height="100" width="200">
+        <span class="splash"></span>
+        <div class="about">
+            <h4 class="h4">Hello, I'm</h4>
+            <h1 class="h1">Akash Kumar Singh</h1>
+            <p class="para">A Full Stack Developer <span class="span">India</span></p>
+            <p class="para-1">I’m a passionate web developer, specializing in creating dynamic, user-friendly websites and applications. My expertise includes HTML, CSS, JavaScript, and frameworks like React and Node.js.<span id="dots">...</span><span id="more"> I thrive on solving complex problems and turning ideas into functional, high-performing digital solutions. With a keen understanding of financial systems, I aim to bridge the gap between technology and finance, delivering impactful projects that enhance user experiences.</span></p>  
+                <div class="about-anchor">
+                    <button onclick="myFunction()" id="myBtn" class="anchor" href="#">Read more</button>
+                </div>
+        </div>
+    </section>
+</div>
+    <div class="container box">
+        <ul class="ul-list">
+            <a href="index.html"><li class="li-list list-1">Portfolio</li></a>
+            <a href="project.html"><li class="li-list list-2">Projects</li></a>
+<!--             <a href="https://youtube.com" target="_blank"><li class="li-list list-3"></li></a>
+            <a href="https://cliqdeal.store" target="_blank"><li class="li-list list-4"></li></a> -->
+        </ul>
+    </div>
+<div class="footer mt-5 mb-10">
+    <p>Crafted with ❤️ by  <a style="text-decoration: none; color: red;" href="index.html">Akash Chauhan </a></p>
+</div>
 </body>
 </html>
