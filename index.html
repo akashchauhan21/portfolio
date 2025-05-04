@@ -1,86 +1,208 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Portfolio</title>
-
-<!--     =========================================
-                    CSS & JS LINK
-    ========================================= -->
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://kit.fontawesome.com/4100a22e85.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akash Portfolio</title>
+  <script src="https://kit.fontawesome.com/4100a22e85.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
         <script type="text/javascript" src="bootstrap.min.js"></script>
         <script type="text/javascript" src="index.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 
-   <nav class="navbar navbar-expand-lg navbar-dark navbar-mod mb-3">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://cliqdeal.store">Product</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link cv" href="Resume.pdf">Download CV</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div>
-    <ul id="scroll_menu" align="center">
-        <li>
-            <a href="project.html"><img src="planning.png">Project</a>
-        </li>
-        <li><a href="#"><img src="certificate.png">Certificate</a>
-        </li>
-        <li><a href="#"><img src="github.png">Github</a>
-        </li>
-        <li><a href="#"><img src="linkedin.png">Linkedin</a></li>
-        <li><a href="#"><img src="media.png">Redit</a></li>
+    <!-- NAVBAR -->
+  <nav class="navbar navbar-dark bg-dark sticky-top py-3">
+    <div class="container-fluid">
+      <!-- Toggle button on the left -->
+      <button
+        class="navbar-toggler me-2"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    </ul>
-</div>
-<div class="container mb-5 mt-5">
-    <section class="section">
-        <img class="img" src="profile-pic.png" height="100" width="200">
-        <span class="splash"></span>
-        <div class="about">
-            <h4 class="h4">Hello, I'm</h4>
-            <h1 class="h1">Akash Kumar Singh</h1>
-            <p class="para">A Full Stack Developer <span class="span">India</span></p>
-            <p class="para-1">I’m a passionate web developer, specializing in creating dynamic, user-friendly websites and applications. My expertise includes HTML, CSS, JavaScript, and frameworks like React and Node.js.<span id="dots">...</span><span id="more"> I thrive on solving complex problems and turning ideas into functional, high-performing digital solutions. With a keen understanding of financial systems, I aim to bridge the gap between technology and finance, delivering impactful projects that enhance user experiences.</span></p>  
-                <div class="about-anchor">
-                    <button onclick="myFunction()" id="myBtn" class="anchor" href="#">Read more</button>
-                </div>
+      <!-- Centered logo -->
+      <a class="navbar-brand mx-auto fw-bold" href="#">Akash Portfolio</a>
+
+      <!-- Offcanvas Menu from Left -->
+      <div
+        class="offcanvas offcanvas-start text-bg-dark"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
         </div>
-    </section>
-</div>
-    <div class="container box">
-        <ul class="ul-list">
-            <a href="index.html"><li class="li-list list-1">Portfolio</li></a>
-            <a href="project.html"><li class="li-list list-2">Projects</li></a>
-<!--             <a href="https://youtube.com" target="_blank"><li class="li-list list-3"></li></a>
-            <a href="https://cliqdeal.store" target="_blank"><li class="li-list list-4"></li></a> -->
-        </ul>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#about">About Us</a></li>
+                <li><a class="dropdown-item" href="#careers">Careers</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#support">Support</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mt-3">
+              <a href="https://google.com" class="btn btn-success w-100 text-white">Download CV</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-<div class="footer mt-5 mb-10">
-    <p>Crafted with ❤️ by  <a style="text-decoration: none; color: red;" href="index.html">Akash Chauhan </a></p>
-</div>
+  </nav>
+
+<!-- SCROLL MENU -->
+  <div class="menu-container">
+    <!-- Internal link (simulate SPA style) -->
+    <a href="project.html" class="menu-item">
+      <img src="planning.png" alt="Project" />
+      Project
+    </a>
+
+    <a href="/Project" class="menu-item">
+      <img src="certificate.png" alt="Certificate" />
+      Certificate
+    </a>
+
+    <!-- External links -->
+    <a href="https://github.com" class="menu-item" target="_blank" rel="noopener noreferrer">
+      <img src="github.png" alt="GitHub" />
+      GitHub
+    </a>
+
+    <a href="https://linkedin.com" class="menu-item" target="_blank" rel="noopener noreferrer">
+      <img src="linkedin.png" alt="LinkedIn" />
+      LinkedIn
+    </a>
+
+    <a href="https://reddit.com" class="menu-item" target="_blank" rel="noopener noreferrer">
+      <img src="reddit.png" alt="Reddit" />
+      Reddit
+    </a>
+  </div>
+</head>
+<body>
+
+  <!-- Carousel Section -->
+  <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img1.jpeg" class="d-block w-100" alt="First slide" />
+      </div>
+      <div class="carousel-item">
+        <img src="img2.jpeg" class="d-block w-100" alt="Second slide" />
+      </div>
+      <div class="carousel-item">
+        <img src="img3.jpeg" class="d-block w-100" alt="Third slide" />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- About Section -->
+  <div class="container mb-5 mt-5">
+    <section class="section">
+      <img class="img" src="profile-pic.png" alt="Profile" />
+      <div class="about">
+        <h4 class="h4">Hello, I'm</h4>
+        <h1 class="h1">Akash Kumar Singh</h1>
+        <p class="para">
+          A Full Stack Developer <span class="span">India</span>
+        </p>
+        <p class="para-1" id="aboutText">
+          I’m a passionate web developer, specializing in creating dynamic, user-friendly websites and applications. My expertise includes HTML, CSS, JavaScript, and frameworks like React and Node.js.
+          <span id="dots">...</span>
+          <span id="more" style="display: none;">
+            I thrive on solving complex problems and turning ideas into functional, high-performing digital solutions. With a keen understanding of financial systems, I aim to bridge the gap between technology and finance, delivering impactful projects that enhance user experiences.
+          </span>
+        </p>
+        <div class="about-anchor">
+          <button onclick="toggleReadMore()" id="myBtn" class="anchor">Read more</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white text-center py-3">
+  <div class="container">
+    <p class="mb-1">&copy; 2025 Akash Kumar Singh. All rights reserved.</p>
+    <p class="mb-0">
+      Built with 💻 using React | Contact:
+      <a href="mailto:cubichost21@gmail.com" class="text-info">cubichost21@gmail.com</a>
+    </p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Read More JS -->
+  <script>
+    function toggleReadMore() {
+      const dots = document.getElementById("dots");
+      const moreText = document.getElementById("more");
+      const btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        moreText.style.display = "none";
+        btnText.textContent = "Read more";
+      } else {
+        dots.style.display = "none";
+        moreText.style.display = "inline";
+        btnText.textContent = "Read less";
+      }
+    }
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
