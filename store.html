@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Store — Website Mentor | Premium Themes, Plugins & SEO Tools</title>
+  <meta name="description" content="Buy premium WordPress themes, plugins, SEO toolkits and Elementor templates from Website Mentor. Instant download, lifetime updates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="store.css">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Website Mentor</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Portfolio</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#portfolio">Work</a></li>
+    <li><a href="store.html" class="store-link active">🛒 Store</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <div class="theme-toggle-knob"></div>
+    </button>
+    <a href="index.html#contact" class="nav-cta">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ STORE HERO BANNER ══ -->
+<div class="store-banner">
+  <div class="store-banner-glow"></div>
+  <div class="store-banner-glow2"></div>
+  <div class="store-banner-content">
+    <div class="store-banner-badge">🛍️ Digital Products Store</div>
+    <h1 class="section-title">Premium <span class="grad-text">Digital Products</span><br>by Website Mentor</h1>
+    <p>Professional WordPress themes, plugins, SEO tools aur Elementor templates — ek baar kharido, lifetime use karo. Instant download after payment.</p>
+    <div class="store-banner-stats">
+      <div>
+        <div class="banner-stat-num">6,200+</div>
+        <div class="banner-stat-label">Happy Customers</div>
+      </div>
+      <div>
+        <div class="banner-stat-num">25+</div>
+        <div class="banner-stat-label">Digital Products</div>
+      </div>
+      <div>
+        <div class="banner-stat-num">4.9★</div>
+        <div class="banner-stat-label">Avg. Rating</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MAIN STORE SECTION ══ -->
+<section id="store">
+
+  <!-- FEATURED BUNDLE -->
+  <div class="bundle-card reveal">
+    <div class="bundle-left">
+      <div class="bundle-label">🔥 Best Value Bundle</div>
+      <h3 class="bundle-title">Ultimate Web Developer <span class="grad-text">Starter Pack</span></h3>
+      <p class="bundle-desc">5 premium themes + 3 plugins + SEO toolkit + hosting guide — sab kuch ek bundle mein at 70% discount! Perfect for freelancers aur agencies.</p>
+      <div class="bundle-includes">
+        <span class="bundle-tag">5 WP Themes</span>
+        <span class="bundle-tag">3 Plugins</span>
+        <span class="bundle-tag">SEO Toolkit</span>
+        <span class="bundle-tag">Hosting Guide</span>
+        <span class="bundle-tag">Lifetime Updates</span>
+        <span class="bundle-tag">Priority Support</span>
+      </div>
+    </div>
+    <div class="bundle-right">
+      <div class="bundle-price-row">
+        <span class="bundle-price-current">₹1,999</span>
+        <div style="margin-top:4px">
+          <span class="bundle-price-original">₹6,499</span>
+          <span class="bundle-save">70% OFF</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
+        <a id="bundlePreviewBtn" href="#" target="_blank" rel="noopener noreferrer"
+           class="bundle-btn"
+           style="background:var(--surface);border:1px solid var(--border);color:var(--text);box-shadow:none;text-decoration:none;display:inline-flex;align-items:center;gap:6px">
+          Live Preview ↗
+        </a>
+        <button class="bundle-btn" onclick="addToCart(this,'Ultimate Starter Bundle','bundle',1999,'📦')">
+          Add Bundle to Cart →
+        </button>
+      </div>
+      <div style="font-size:0.75rem;color:var(--text-muted);margin-top:8px;text-align:right">
+        🔒 Secure · ⚡ Instant Download
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTER + SEARCH ROW -->
+  <div class="store-filters reveal">
+    <button class="filter-btn active" data-filter="all">All Products</button>
+    <button class="filter-btn" data-filter="theme">WP Themes</button>
+    <button class="filter-btn" data-filter="plugin">Plugins</button>
+    <button class="filter-btn" data-filter="seo">SEO Tools</button>
+    <button class="filter-btn" data-filter="template">Templates</button>
+    <button class="filter-btn" data-filter="ai">AI Tools</button>
+    <button class="filter-btn" data-filter="free">Free</button>
+  </div>
+
+  <div class="store-controls reveal">
+    <div class="store-search-wrap">
+      <span class="store-search-icon">🔍</span>
+      <input type="text" id="storeSearch" class="store-search" placeholder="Search products...">
+    </div>
+    <select id="storeSort" class="store-sort">
+      <option value="default">Sort: Default</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+      <option value="popular">Most Popular</option>
+    </select>
+    <span class="product-count" id="productCount">6 products</span>
+  </div>
+
+  <!-- PRODUCTS GRID — rendered by store.js from products.js -->
+  <div class="products-grid" id="productsGrid">
+    <!-- Loading... -->
+  </div>
+
+</section>
+
+<!-- ══ TRUST BAR ══ -->
+<div class="store-trust">
+  <div class="trust-item"><span class="trust-icon">🔒</span> Secure Payment</div>
+  <div class="trust-item"><span class="trust-icon">⚡</span> Instant Download</div>
+  <div class="trust-item"><span class="trust-icon">🔄</span> Lifetime Updates</div>
+  <div class="trust-item"><span class="trust-icon">🛡️</span> 7-Day Money Back Guarantee</div>
+  <div class="trust-item"><span class="trust-icon">💬</span> Priority Support</div>
+  <div class="trust-item"><span class="trust-icon">📄</span> GPL Licensed</div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-brand">
+    <a href="index.html" class="nav-logo">Website Mentor</a>
+    <p>Premium digital products · Instant delivery.</p>
+  </div>
+  <div class="footer-right">
+    <div class="social-links">
+      <a href="#" class="social-link" title="LinkedIn">in</a>
+      <a href="#" class="social-link" title="Twitter">𝕏</a>
+      <a href="#" class="social-link" title="GitHub">⌥</a>
+      <a href="#" class="social-link" title="Instagram">◎</a>
+    </div>
+    <div class="footer-copy">© 2024 Akash Chauhan · Website Mentor. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ══ CART OVERLAY + DRAWER ══ -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🛍️</div>
+      <div style="font-weight:600">Cart khali hai!</div>
+      <div style="font-size:0.78rem;margin-top:4px">Koi product add karein</div>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total Amount</span>
+      <span class="cart-total-val" id="cartTotal">₹0</span>
+    </div>
+    <button class="checkout-btn" onclick="checkout()">Checkout Now →</button>
+    <a href="#" id="cartWhatsapp" target="_blank" class="cart-whatsapp">💬 Order via WhatsApp</a>
+    <p class="checkout-note">🔒 Secure Payment · Instant Digital Delivery</p>
+  </div>
+</div>
+
+<!-- ══ CART FAB ══ -->
+<button class="cart-fab" onclick="openCart()" title="Open Cart">
+  🛒
+  <div class="cart-count" id="cartCount">0</div>
+</button>
+
+<script src="common.js"></script>
+<script src="products.js"></script>
+<script src="store.js"></script>
+</body>
+</html>
